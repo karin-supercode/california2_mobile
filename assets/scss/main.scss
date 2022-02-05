@@ -3,7 +3,6 @@
   font-family: Larish;
   src: url(../fonts/LarishNeueSemibold.woff);
 }
-
 @import "_general.scss";
 @import "_mixin.scss";
 
@@ -23,7 +22,6 @@
 .fontBlack {
   color: #000;
 }
-
 header .bearContainer,
 .heroSection,
 .goldenSection,
@@ -32,12 +30,10 @@ header .bearContainer,
 footer {
   padding: 0 8%;
 }
-
 span {
   color: black;
   -webkit-text-stroke: 2px #fff;
 }
-
 h1 {
   font-size: clamp(2rem, 7rem, 9rem);
   line-height: 1.1em;
@@ -47,7 +43,6 @@ h2 {
   line-height: 1em;
   padding-bottom: 2%;
 }
-
 .pBig {
   font-family: Larish, serif;
   font-size: 7rem;
@@ -56,7 +51,6 @@ h2 {
 .pSmall {
   font-size: 1.5rem;
 }
-
 blockquote .quoteText,
 section .joinArticleText {
   font-family: Larish;
@@ -82,7 +76,6 @@ section .joinArticleText {
   p {
     padding: 1.5% 0;
   }
-
   .flexContainerColumn {
     height: 85vh;
     padding-top: 5%;
@@ -175,7 +168,6 @@ section .joinArticleText {
   position: relative;
   padding-top: 15%;
   padding-bottom: 50%;
-
   img {
     position: absolute;
   }
@@ -208,7 +200,6 @@ section .joinArticleText {
     right: -20%;
     width: 50%;
     z-index: 7;
-
     animation-name: rotieren;
     animation-duration: 10s;
     animation-timing-function: linear;
@@ -269,11 +260,9 @@ section .joinArticleText {
 }
 
 //SECTION:  Join us - ANIMATION //////////////
-
 .joinSection .marquee {
   display: none;
 }
-
 .joinAnimationText {
   display: inline-block;
   width: 200%;
@@ -283,7 +272,6 @@ section .joinArticleText {
   font-size: 6rem;
   transform: rotate(45deg);
   z-index: 100;
-
   span {
     color: white;
     -webkit-text-stroke: 2px black;
@@ -342,7 +330,6 @@ section .joinArticleText {
   .joinSection,
   .stuckSection.flexContainerCenter {
     display: block;
-    // color: red;
   }
   .goldenSection.flexContainerCenter .leftArticle,
   .poppySection.flexContainerCenter .leftArticle,
@@ -401,7 +388,6 @@ section .joinArticleText {
         position: relative;
         top: 0;
         left: 0;
-
         inline-size: 100%;
         aspect-ratio: 16 / 9;
         object-fit: cover;
@@ -453,7 +439,6 @@ section .joinArticleText {
         from {
           transform: translateX(0);
         }
-
         to {
           transform: translateX(-100%);
         }
@@ -478,7 +463,6 @@ section .joinArticleText {
       padding: 4% 0;
     }
   }
-
   .heroSection {
     h1 {
       font-size: 2.5rem;
