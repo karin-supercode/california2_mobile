@@ -323,14 +323,12 @@ section .joinArticleText {
 }
 
 .joinAnimationText {
-  display: inline-block;
-  width: 200%;
+  white-space: nowrap;
   color: #000;
   background-color: #fff;
   font-family: Larish, serif;
   font-size: 6rem;
   transform: rotate(45deg);
-  z-index: 100;
   -webkit-animation-name: diagonalAnimation;
           animation-name: diagonalAnimation;
   -webkit-animation-duration: 5s;
