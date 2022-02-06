@@ -162,7 +162,7 @@ section .joinArticleText {
   width: 20%;
 }
 .stuckSection .img3 {
-  top: 35%;
+  top: 37%;
   right: 0;
   width: 20%;
 }
@@ -209,6 +209,7 @@ section .joinArticleText {
   position: relative;
   padding-top: 15%;
   padding-bottom: 50%;
+  scrollbar-width: none;
 }
 .goldenSection img,
 .poppySection img {
@@ -216,14 +217,14 @@ section .joinArticleText {
 }
 .goldenSection .imgBearLeft,
 .poppySection .imgBearLeft {
-  top: 55%;
+  top: 58%;
   left: 8%;
   width: 50%;
   z-index: 5;
 }
 .goldenSection .imgBearRight,
 .poppySection .imgBearRight {
-  top: 65%;
+  top: 66%;
   left: 53%;
   width: 28%;
   z-index: 10;
@@ -244,9 +245,9 @@ section .joinArticleText {
 }
 .goldenSection .imgAnimation,
 .poppySection .imgAnimation {
-  bottom: -32%;
-  right: -20%;
-  width: 50%;
+  bottom: -28%;
+  right: -9%;
+  width: 36%;
   z-index: 7;
   -webkit-animation-name: rotieren;
           animation-name: rotieren;
@@ -296,7 +297,7 @@ section .joinArticleText {
 }
 
 .poppySection {
-  padding-top: 27%;
+  padding-top: 31%;
   padding-bottom: 70%;
 }
 
@@ -390,45 +391,41 @@ section .joinArticleText {
 }
 
 @media (max-width: 1024px) {
-  section.stuckSection article {
+  .stuckSection article {
     width: 43%;
   }
 
-  section.joinSection .joinArticle {
+  .joinSection .joinArticle {
     width: 100%;
   }
 
-  section.joinSection .joinAnimationText {
+  .joinSection .joinAnimationText {
     display: none;
   }
 
-  section.joinSection .marquee {
+  .joinSection .marquee {
     display: block;
     overflow: hidden;
     color: #000;
     font-size: clamp(2rem, 1.5813rem + 1.5764vw, 3rem);
-    text-transform: uppercase;
     background-color: #fff;
   }
-  section.joinSection .marquee span {
+  .joinSection .marquee span {
     color: white;
     -webkit-text-stroke: 2px black;
   }
-  section.joinSection .marquee .marquee__inner {
+  .joinSection .marquee .marquee__inner {
     display: flex;
   }
-  section.joinSection .marquee .marquee__inner .marquee__line {
+  .joinSection .marquee .marquee__inner .marquee__line {
     flex-shrink: 0;
-    margin: 0;
     padding: 5px 15px;
-    min-width: 100%;
-    white-space: nowrap;
     -webkit-animation-name: marqueeLine;
             animation-name: marqueeLine;
     -webkit-animation-duration: 5s;
             animation-duration: 5s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
   }
@@ -493,7 +490,6 @@ section .joinArticleText {
   .stuckSection.flexContainerCenter {
     display: flex;
     flex-wrap: wrap;
-    gap: 2%;
   }
   .stuckSection.flexContainerCenter .stuckImgContainer {
     display: grid;
@@ -604,6 +600,5 @@ section .joinArticleText {
   }
   .footerSection.flexContainer .logos img {
     width: 30%;
-    height: 30%;
   }
 }/*# sourceMappingURL=main.css.map */
