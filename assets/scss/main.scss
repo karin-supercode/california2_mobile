@@ -169,7 +169,6 @@ section .joinArticleText {
   position: relative;
   padding-top: 15%;
   padding-bottom: 50%;
-  scrollbar-width:none;
   img {
     position: absolute;
   }
@@ -198,7 +197,7 @@ section .joinArticleText {
     z-index: 5;
   }
   .imgAnimation {
-    bottom: -28%;
+    bottom: 77%;
     right: -9%;
     width: 36%;
     z-index: 7;
@@ -216,6 +215,8 @@ section .joinArticleText {
       }
     }
   }
+
+ 
 
   .leftArticle {
     width: 48%;
@@ -239,6 +240,7 @@ section .joinArticleText {
 .poppySection {
   padding-top: 31%;
   padding-bottom: 70%;
+  overflow:hidden;
 }
 
 //SECTION:  Join us /////////////////////////////////
@@ -266,7 +268,7 @@ section .joinArticleText {
   display: none;
 }
 .joinAnimationText {
-  white-space:nowrap;
+  white-space: nowrap;
   color: #000;
   background-color: #fff;
   font-family: Larish, serif;
@@ -469,7 +471,7 @@ section .joinArticleText {
     }
   }
   .heroSection {
-      background-size:70%;
+    background-size: 70%;
     h1 {
       font-size: 2.5rem;
     }
@@ -479,7 +481,7 @@ section .joinArticleText {
   .poppySection.flexContainerCenter {
     .leftArticle h2 {
       font-size: 2.3rem;
-      padding-right:0;
+      padding-right: 0;
     }
     blockquote .quoteText {
       font-size: 1.2rem;

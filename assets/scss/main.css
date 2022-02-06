@@ -209,7 +209,6 @@ section .joinArticleText {
   position: relative;
   padding-top: 15%;
   padding-bottom: 50%;
-  scrollbar-width: none;
 }
 .goldenSection img,
 .poppySection img {
@@ -245,7 +244,7 @@ section .joinArticleText {
 }
 .goldenSection .imgAnimation,
 .poppySection .imgAnimation {
-  bottom: -28%;
+  bottom: 77%;
   right: -9%;
   width: 36%;
   z-index: 7;
@@ -299,6 +298,7 @@ section .joinArticleText {
 .poppySection {
   padding-top: 31%;
   padding-bottom: 70%;
+  overflow: hidden;
 }
 
 .joinSection {
