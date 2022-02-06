@@ -25,7 +25,7 @@ a.buttonRSVP {
   font-size: clamp(0.5rem, 1.2rem, 2rem);
   color: #fff;
   text-decoration: none;
-  padding: 1.5% 3.5%;
+  padding: clamp(0.7rem, 0.4488rem + 0.9458vw, 1.3rem) clamp(1.3rem, 0.6719rem + 2.3645vw, 2.8rem);
   border: 1px solid;
   transition: all 0.7s ease;
 }
@@ -73,30 +73,30 @@ span {
 }
 
 h1 {
-  font-size: clamp(2rem, 7rem, 9rem);
+  font-size: clamp(3rem, 1.3251rem + 6.3054vw, 7rem);
   line-height: 1.1em;
 }
 
 h2 {
-  font-size: clamp(1rem, 6rem, 9rem);
+  font-size: clamp(3rem, 1.7438rem + 4.7291vw, 6rem);
   line-height: 1em;
   padding-bottom: 2%;
 }
 
 .pBig {
   font-family: Larish, serif;
-  font-size: 7rem;
+  font-size: clamp(3rem, 1.3251rem + 6.3054vw, 7rem);
   padding-bottom: 2%;
 }
 
 .pSmall {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 0.7906rem + 0.7882vw, 1.5rem);
 }
 
 blockquote .quoteText,
 section .joinArticleText {
   font-family: Larish;
-  font-size: clamp(1rem, 2rem, 3rem);
+  font-size: clamp(1rem, 0.5813rem + 1.5764vw, 2rem);
 }
 
 .verticalLine {
@@ -111,7 +111,7 @@ section .joinArticleText {
   position: relative;
 }
 .headerSection h1 {
-  font-size: clamp(2rem, 6rem, 8rem);
+  font-size: clamp(3rem, 1.7438rem + 4.7291vw, 6rem);
   width: 80%;
   text-align: center;
   line-height: 0.8em;
@@ -194,8 +194,8 @@ section .joinArticleText {
   padding-top: 70%;
 }
 .stuckSection article p {
-  font-size: 1.2rem;
-  line-height: 2em;
+  font-size: clamp(1rem, 0.9163rem + 0.3153vw, 1.2rem);
+  line-height: clamp(1.8rem, 1.7163rem + 0.3153vw, 2rem);
 }
 .stuckSection article p:first-of-type {
   padding-bottom: 120%;
@@ -291,7 +291,7 @@ section .joinArticleText {
 }
 .goldenSection blockquote p.quoteAutor,
 .poppySection blockquote p.quoteAutor {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 0.8744rem + 0.4729vw, 1.3rem);
   padding-top: 4%;
 }
 
@@ -391,6 +391,66 @@ section .joinArticleText {
   width: 20%;
 }
 
+@media (max-width: 1024px) {
+  section.stuckSection article {
+    width: 43%;
+  }
+
+  section.joinSection .joinArticle {
+    width: 100%;
+  }
+
+  section.joinSection .joinAnimationText {
+    display: none;
+  }
+
+  section.joinSection .marquee {
+    display: block;
+    overflow: hidden;
+    color: #000;
+    font-size: clamp(2rem, 1.5813rem + 1.5764vw, 3rem);
+    text-transform: uppercase;
+    background-color: #fff;
+  }
+  section.joinSection .marquee span {
+    color: white;
+    -webkit-text-stroke: 2px black;
+  }
+  section.joinSection .marquee .marquee__inner {
+    display: flex;
+  }
+  section.joinSection .marquee .marquee__inner .marquee__line {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 5px 15px;
+    min-width: 100%;
+    white-space: nowrap;
+    -webkit-animation-name: marqueeLine;
+            animation-name: marqueeLine;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes marqueeLine {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes marqueeLine {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
 @media (max-width: 768px) {
   .goldenSection.flexContainerCenter,
 .poppySection.flexContainerCenter,
@@ -409,8 +469,7 @@ section .joinArticleText {
 .poppySection.flexContainerCenter .leftArticle h2,
 .joinSection .joinArticle h2,
 .stuckSection.flexContainerCenter article h2 {
-    font-size: 4rem;
-    padding-right: 0;
+    font-size: 3rem;
   }
 
   .goldenSection blockquote,
@@ -472,61 +531,10 @@ section .joinArticleText {
   }
   .stuckSection.flexContainerCenter article h2,
 .stuckSection.flexContainerCenter article p {
-    padding: 0 8%;
-  }
-
-  section.joinSection .joinAnimationText {
-    display: none;
-  }
-
-  section.joinSection .marquee {
-    display: block;
-    overflow: hidden;
-    color: #000;
-    font-size: 3rem;
-    text-transform: uppercase;
-    background-color: #fff;
-  }
-  section.joinSection .marquee span {
-    color: white;
-    -webkit-text-stroke: 2px black;
-  }
-  section.joinSection .marquee .marquee__inner {
-    display: flex;
-  }
-  section.joinSection .marquee .marquee__inner .marquee__line {
-    flex-shrink: 0;
-    margin: 0;
-    padding: 5px 15px;
-    min-width: 100%;
-    white-space: nowrap;
-    -webkit-animation-name: marqueeLine;
-            animation-name: marqueeLine;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-  }
-  @-webkit-keyframes marqueeLine {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-  @keyframes marqueeLine {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+    padding: 1% 8%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .headerSection h1 {
     font-size: 3rem;
   }
@@ -537,6 +545,9 @@ section .joinArticleText {
     padding: 4% 0;
   }
 
+  .heroSection {
+    background-size: 70%;
+  }
   .heroSection h1 {
     font-size: 2.5rem;
   }
@@ -544,6 +555,7 @@ section .joinArticleText {
   .goldenSection.flexContainerCenter .leftArticle h2,
 .poppySection.flexContainerCenter .leftArticle h2 {
     font-size: 2.3rem;
+    padding-right: 0;
   }
   .goldenSection.flexContainerCenter blockquote .quoteText,
 .poppySection.flexContainerCenter blockquote .quoteText {
@@ -571,9 +583,9 @@ section .joinArticleText {
   .stuckSection.flexContainerCenter .stuckImgContainer {
     grid-auto-columns: 65%;
   }
-
-  .joinSection .joinArticle .buttonRSVP {
-    padding: 5% 10%;
+  .stuckSection.flexContainerCenter article h2 {
+    font-size: 2.3rem;
+    padding-bottom: 1rem;
   }
 
   .joinSection .joinArticle .joinArticleText {
@@ -582,6 +594,7 @@ section .joinArticleText {
 
   .footerSection.flexContainer {
     display: block;
+    padding-bottom: 1rem;
   }
   .footerSection.flexContainer .socialArticle {
     padding: 5% 0;

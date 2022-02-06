@@ -35,26 +35,26 @@ span {
   -webkit-text-stroke: 2px #fff;
 }
 h1 {
-  font-size: clamp(2rem, 7rem, 9rem);
+  font-size: clamp(3rem, 1.3251rem + 6.3054vw, 7rem);
   line-height: 1.1em;
 }
 h2 {
-  font-size: clamp(1rem, 6rem, 9rem);
+  font-size: clamp(3rem, 1.7438rem + 4.7291vw, 6rem);
   line-height: 1em;
   padding-bottom: 2%;
 }
 .pBig {
   font-family: Larish, serif;
-  font-size: 7rem;
+  font-size: clamp(3rem, 1.3251rem + 6.3054vw, 7rem);
   padding-bottom: 2%;
 }
 .pSmall {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 0.7906rem + 0.7882vw, 1.5rem);
 }
 blockquote .quoteText,
 section .joinArticleText {
   font-family: Larish;
-  font-size: clamp(1rem, 2rem, 3rem);
+  font-size: clamp(1rem, 0.5813rem + 1.5764vw, 2rem);
 }
 
 //HEADER /////////////////////////////////
@@ -68,7 +68,7 @@ section .joinArticleText {
 .headerSection {
   position: relative;
   h1 {
-    font-size: clamp(2rem, 6rem, 8rem);
+    font-size: clamp(3rem, 1.7438rem + 4.7291vw, 6rem);
     width: 80%;
     text-align: center;
     line-height: 0.8em;
@@ -150,8 +150,8 @@ section .joinArticleText {
       padding-top: 70%;
     }
     p {
-      font-size: 1.2rem;
-      line-height: 2em;
+      font-size: clamp(1rem, 0.9163rem + 0.3153vw, 1.2rem);
+      line-height: clamp(1.8rem, 1.7163rem + 0.3153vw, 2rem);
     }
     p:first-of-type {
       padding-bottom: 120%;
@@ -227,7 +227,7 @@ section .joinArticleText {
   blockquote {
     width: 52%;
     p.quoteAutor {
-      font-size: 1.3rem;
+      font-size: clamp(1rem, 0.8744rem + 0.4729vw, 1.3rem);
       padding-top: 4%;
     }
   }
@@ -320,6 +320,59 @@ section .joinArticleText {
   }
 }
 
+//////////////////////////////////////////
+// MEDIA QUERIES - Desktop 1024px Version
+//////////////////////////////////////////
+
+@media (max-width: 1024px) {
+  section.stuckSection article {
+    width: 43%;
+  }
+
+  section.joinSection .joinArticle {
+    width: 100%;
+  }
+
+  section.joinSection .joinAnimationText {
+    display: none;
+  }
+
+  section.joinSection .marquee {
+    display: block;
+    overflow: hidden;
+    color: #000;
+    font-size: clamp(2rem, 1.5813rem + 1.5764vw, 3rem);
+    text-transform: uppercase;
+    background-color: #fff;
+    span {
+      color: white;
+      -webkit-text-stroke: 2px black;
+    }
+    .marquee__inner {
+      display: flex;
+      .marquee__line {
+        flex-shrink: 0;
+        margin: 0;
+        padding: 5px 15px;
+        min-width: 100%;
+        white-space: nowrap;
+        animation-name: marqueeLine;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+      @keyframes marqueeLine {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+    }
+  }
+}
+
 /////////////////////////////////
 // MEDIA QUERIES - TABLET Version
 /////////////////////////////////
@@ -337,8 +390,7 @@ section .joinArticleText {
   .stuckSection.flexContainerCenter article {
     width: 100%;
     h2 {
-      font-size: 4rem;
-      padding-right: 0;
+      font-size: 3rem;
     }
   }
   .goldenSection blockquote,
@@ -404,45 +456,7 @@ section .joinArticleText {
 
     article h2,
     article p {
-      padding: 0 8%;
-    }
-  }
-
-  section.joinSection .joinAnimationText {
-    display: none;
-  }
-  section.joinSection .marquee {
-    display: block;
-    overflow: hidden;
-    color: #000;
-    font-size: 3rem;
-    text-transform: uppercase;
-    background-color: #fff;
-    span {
-      color: white;
-      -webkit-text-stroke: 2px black;
-    }
-    .marquee__inner {
-      display: flex;
-      .marquee__line {
-        flex-shrink: 0;
-        margin: 0;
-        padding: 5px 15px;
-        min-width: 100%;
-        white-space: nowrap;
-        animation-name: marqueeLine;
-        animation-duration: 5s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-      }
-      @keyframes marqueeLine {
-        from {
-          transform: translateX(0);
-        }
-        to {
-          transform: translateX(-100%);
-        }
-      }
+      padding: 1% 8%;
     }
   }
 }
@@ -451,8 +465,9 @@ section .joinArticleText {
 // MEDIA QUERIES - Mobile Version
 /////////////////////////////////
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .headerSection {
+  
     h1 {
       font-size: 3rem;
     }
@@ -464,6 +479,7 @@ section .joinArticleText {
     }
   }
   .heroSection {
+      background-size:70%;
     h1 {
       font-size: 2.5rem;
     }
@@ -473,6 +489,7 @@ section .joinArticleText {
   .poppySection.flexContainerCenter {
     .leftArticle h2 {
       font-size: 2.3rem;
+      padding-right:0;
     }
     blockquote .quoteText {
       font-size: 1.2rem;
@@ -501,11 +518,9 @@ section .joinArticleText {
     .stuckImgContainer {
       grid-auto-columns: 65%;
     }
-  }
-
-  .joinSection .joinArticle {
-    .buttonRSVP {
-      padding: 5% 10%;
+    article h2 {
+      font-size: 2.3rem;
+      padding-bottom: 1rem;
     }
   }
 
@@ -515,6 +530,7 @@ section .joinArticleText {
 
   .footerSection.flexContainer {
     display: block;
+    padding-bottom: 1rem;
 
     .socialArticle {
       padding: 5% 0;

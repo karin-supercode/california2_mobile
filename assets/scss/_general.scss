@@ -21,7 +21,10 @@ a.buttonRSVP {
 
   color: #fff;
   text-decoration: none;
-  padding: 1.5% 3.5%;
+  // padding: 1.3rem 2.8rem;
+
+  padding: clamp(0.7rem, 0.4488rem + 0.9458vw, 1.3rem) clamp(1.3rem, 0.6719rem + 2.3645vw, 2.8rem);
+
   border: 1px solid;
   transition: all 0.7s ease;
 }
