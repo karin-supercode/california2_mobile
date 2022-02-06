@@ -244,8 +244,8 @@ section .joinArticleText {
 }
 .goldenSection .imgAnimation,
 .poppySection .imgAnimation {
-  bottom: 77%;
-  right: -9%;
+  bottom: 79%;
+  right: -10%;
   width: 36%;
   z-index: 7;
   -webkit-animation-name: rotieren;
